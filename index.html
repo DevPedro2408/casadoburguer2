@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa do Burguer | Hambúrguer artesanal</title>
+  <meta name="description" content="Hambúrgueres artesanais, combos e porções. Monte seu pedido e envie direto pelo WhatsApp.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="#inicio" class="logo">🍔 Casa do <span>Burguer</span></a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="openCartBtn" aria-label="Abrir carrinho">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#cardapio" class="btn btn-primary nav-order">Fazer pedido</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="tag">Artesanal desde 2020</span>
+          <h1>Carne suculenta, pão macio e <em>muito sabor</em>.</h1>
+          <p>Blend de carne moída na hora, queijo derretido no ponto e molho da casa. Faça seu pedido em poucos cliques e receba quentinho.</p>
+          <div class="hero-buttons">
+            <a href="#cardapio" class="btn btn-primary">Ver cardápio</a>
+            <a href="#cardapio" class="btn btn-outline">Fazer pedido</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=75" alt="Hambúrguer artesanal com queijo">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DIFERENCIAIS ================= -->
+    <section class="features">
+      <div class="container features-grid">
+        <article class="feature">
+          <span class="feature-icon">🥩</span>
+          <h3>Hambúrguer artesanal</h3>
+          <p>Blend próprio, feito todos os dias.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon">🥬</span>
+          <h3>Ingredientes selecionados</h3>
+          <p>Frescos e escolhidos a dedo.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon">⚡</span>
+          <h3>Pedido rápido</h3>
+          <p>Escolha, envie no WhatsApp e pronto.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= CARDÁPIO ================= -->
+    <section class="menu section" id="cardapio">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Cardápio</span>
+          <h2>Escolha o seu favorito</h2>
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-category="todos">Todos</button>
+          <button class="filter-btn" data-category="hamburgueres">Hambúrgueres</button>
+          <button class="filter-btn" data-category="combos">Combos</button>
+          <button class="filter-btn" data-category="porcoes">Porções</button>
+          <button class="filter-btn" data-category="bebidas">Bebidas</button>
+        </div>
+
+        <!-- Os cards são criados pelo JavaScript -->
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="about section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=75" alt="Hambúrguer sendo preparado" loading="lazy">
+        </div>
+        <div class="about-text">
+          <span class="tag">Sobre nós</span>
+          <h2>Uma paixão que virou hamburgueria</h2>
+          <p>Começamos numa pequena cozinha com uma ideia simples: fazer o hambúrguer que a gente gostaria de comer. Hoje seguimos com o mesmo cuidado, da carne ao molho.</p>
+          <div class="stats">
+            <div><strong>+5</strong><span>anos de história</span></div>
+            <div><strong>+10 mil</strong><span>pedidos entregues</span></div>
+            <div><strong>100%</strong><span>ingredientes selecionados</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEPOIMENTOS ================= -->
+    <section class="testimonials section">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Depoimentos</span>
+          <h2>Quem provou, aprovou</h2>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <p>"Melhor hambúrguer da região! A carne é suculenta e o pedido chegou rapidinho."</p>
+            <strong>Mariana S.</strong>
+          </article>
+          <article class="testimonial">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <p>"Pedir pelo site é muito prático. O X-Bacon é perfeito, já virou rotina de sexta."</p>
+            <strong>Rafael L.</strong>
+          </article>
+          <article class="testimonial">
+            <div class="stars" aria-label="4 estrelas">★★★★☆</div>
+            <p>"Batata crocante e atendimento nota 10. Voltarei sempre!"</p>
+            <strong>Camila P.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="contact section" id="contato">
+      <div class="container">
+        <div class="section-head">
+          <span class="tag">Contato</span>
+          <h2>Venha nos visitar</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card"><span>📍</span><h3>Endereço</h3><p>Rua das Palmeiras, 123<br>Centro – São Luís/MA</p></div>
+          <div class="contact-card"><span>🕒</span><h3>Horário</h3><p>Ter a Dom<br>18h às 23h30</p></div>
+          <div class="contact-card"><span>💬</span><h3>WhatsApp</h3><p><a href="https://wa.me/5598999999999" target="_blank" rel="noopener">(98) 99999-9999</a></p></div>
+          <div class="contact-card"><span>📸</span><h3>Instagram</h3><p><a href="https://instagram.com/casadoburguer" target="_blank" rel="noopener">@casadoburguer</a></p></div>
+        </div>
+        <div class="center">
+          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+das+Palmeiras+123+Centro+Sao+Luis+MA" target="_blank" rel="noopener">Abrir no Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA FINAL ================= -->
+    <section class="cta">
+      <div class="container">
+        <h2>Seu próximo hambúrguer está a um clique de distância.</h2>
+        <a href="#cardapio" class="btn btn-light">Fazer pedido</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#inicio" class="logo">🍔 Casa do <span>Burguer</span></a>
+        <p>Hambúrguer artesanal feito com carinho.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Redes</h4>
+        <ul>
+          <li><a href="https://instagram.com/casadoburguer" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://wa.me/5598991042408" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horário</h4>
+        <p>Ter a Dom<br>18h às 23h30</p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Casa do Burguer. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ================= CARRINHO (painel lateral) ================= -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart" id="cart" aria-label="Carrinho" aria-hidden="true">
+    <div class="cart-header">
+      <h3 id="cartTitle">Seu carrinho</h3>
+      <button class="icon-btn" id="closeCartBtn" aria-label="Fechar carrinho">✕</button>
+    </div>
+
+    <!-- ETAPA 1: itens -->
+    <div class="cart-view" id="viewCart">
+      <div class="cart-body" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="total-row"><span>Subtotal</span><span id="cartSubtotal">R$ 0,00</span></div>
+        <div class="total-row total"><span>Total</span><span id="cartTotal">R$ 0,00</span></div>
+        <button class="btn btn-primary btn-block" id="checkoutBtn">Finalizar pedido</button>
+      </div>
+    </div>
+
+    <!-- ETAPA 2: dados do cliente -->
+    <div class="cart-view hidden" id="viewForm">
+      <form class="cart-body order-form" id="orderForm" novalidate>
+        <div class="field">
+          <label for="customerName">Nome *</label>
+          <input type="text" id="customerName" placeholder="Seu nome">
+          <small class="error" data-error-for="customerName"></small>
+        </div>
+
+        <fieldset class="field">
+          <legend>Tipo do pedido *</legend>
+          <div class="options">
+            <label class="option"><input type="radio" name="orderType" value="Entrega" checked> Entrega</label>
+            <label class="option"><input type="radio" name="orderType" value="Retirada no local"> Retirada no local</label>
+          </div>
+        </fieldset>
+
+        <div id="addressFields">
+          <div class="field">
+            <label for="street">Rua *</label>
+            <input type="text" id="street" placeholder="Nome da rua">
+            <small class="error" data-error-for="street"></small>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="number">Número *</label>
+              <input type="text" id="number" inputmode="numeric" placeholder="123">
+              <small class="error" data-error-for="number"></small>
+            </div>
+            <div class="field">
+              <label for="neighborhood">Bairro *</label>
+              <input type="text" id="neighborhood" placeholder="Bairro">
+              <small class="error" data-error-for="neighborhood"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="complement">Complemento (opcional)</label>
+            <input type="text" id="complement" placeholder="Apto, bloco, referência...">
+          </div>
+        </div>
+
+        <fieldset class="field">
+          <legend>Forma de pagamento *</legend>
+          <div class="options">
+            <label class="option"><input type="radio" name="payment" value="Pix"> Pix</label>
+            <label class="option"><input type="radio" name="payment" value="Dinheiro"> Dinheiro</label>
+            <label class="option"><input type="radio" name="payment" value="Cartão"> Cartão</label>
+          </div>
+          <small class="error" data-error-for="payment"></small>
+        </fieldset>
+
+        <div class="field">
+          <label for="notes">Observação (opcional)</label>
+          <textarea id="notes" rows="3" placeholder="Ex.: sem cebola"></textarea>
+        </div>
+
+        <div class="form-buttons">
+          <button type="button" class="btn btn-outline-dark" id="backToCartBtn">Voltar</button>
+          <button type="submit" class="btn btn-primary">Ver resumo</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ETAPA 3: resumo -->
+    <div class="cart-view hidden" id="viewSummary">
+      <div class="cart-body">
+        <div class="summary-box">
+          <h4>Seu pedido</h4>
+          <ul id="summaryItems"></ul>
+          <div class="total-row total"><span>Total</span><span id="summaryTotal"></span></div>
+        </div>
+        <div class="summary-box" id="summaryData"></div>
+      </div>
+      <div class="cart-footer">
+        <button class="btn btn-whatsapp btn-block" id="sendWhatsappBtn">Enviar pedido pelo WhatsApp</button>
+        <button class="btn btn-outline-dark btn-block" id="backToFormBtn">Editar dados</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
